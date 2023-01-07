@@ -1,3 +1,17 @@
+''' Adam Iskandar Bin Ahmad Faisal
+    1181101747
+    CE
+    
+    Muhammad Amir Asyraf Bin Fazli
+    1191301877
+    CE
+    
+    Nur Syakira Binti Suhaimi
+    1181101225
+    CE
+    
+    ECE3086 Assignment 1 - Q1   '''
+
 import numpy as np
 import cv2
 import os

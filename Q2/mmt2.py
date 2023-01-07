@@ -1,3 +1,17 @@
+''' Adam Iskandar Bin Ahmad Faisal
+    1181101747
+    CE
+    
+    Muhammad Amir Asyraf Bin Fazli
+    1191301877
+    CE
+    
+    Nur Syakira Binti Suhaimi
+    1181101225
+    CE
+    
+    ECE3086 Assignment 1 - Q2   '''
+
 import numpy as np
 import cv2
 import os
@@ -6,10 +20,10 @@ import matplotlib
 import torch
 from time import time
 
-path_working = r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/AS1'
+path_working = r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Q2'
 os.chdir(path_working)
 
-videoFile = 'surveillance_9.mp4'
+videoFile = '../surveillance_9.mp4'
 delay = 100
 
 name, ext = os.path.splitext(videoFile)

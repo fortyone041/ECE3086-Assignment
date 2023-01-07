@@ -1,9 +1,17 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 17 15:50:11 2020
+''' Adam Iskandar Bin Ahmad Faisal
+    1181101747
+    CE
+    
+    Muhammad Amir Asyraf Bin Fazli
+    1191301877
+    CE
+    
+    Nur Syakira Binti Suhaimi
+    1181101225
+    CE
+    
+    ECE3086 Assignment 1 - Q4   '''
 
-@author: user
-"""
 import cv2
 from tkinter import Label
 from tkinter import *
@@ -13,7 +21,7 @@ import tkinter as tk
 
 import os
 # change the path according to your pc
-work_path= r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/tutorial_GUI_student_video_proc/tutorial_GUI_student'
+work_path= r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Q4'
 os.chdir(work_path)
 
 i=0

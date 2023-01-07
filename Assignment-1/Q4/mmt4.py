@@ -21,7 +21,7 @@ import tkinter as tk
 
 import os
 # change the path according to your pc
-work_path= r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Q4'
+work_path= r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Assignment-1/Q4'
 os.chdir(work_path)
 
 i=0

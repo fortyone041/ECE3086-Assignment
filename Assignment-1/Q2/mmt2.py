@@ -20,7 +20,7 @@ import matplotlib
 import torch
 from time import time
 
-path_working = r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Q2'
+path_working = r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Assignment-1/Q2'
 os.chdir(path_working)
 
 videoFile = '../surveillance_9.mp4'

@@ -19,7 +19,7 @@ from matplotlib import pyplot as plt
 import torch
 from time import time
 
-path_working = r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Q3'
+path_working = r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Assignment-1/Q3'
 os.chdir(path_working)
 
 def encodeVideoAsMJPEG(videoFile, duration):

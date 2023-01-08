@@ -40,7 +40,9 @@ def encodeVideoAsMJPEG(videoFile, duration):
 
     video = cv2.VideoWriter(destinationFolder, cv2.VideoWriter_fourcc(*'mjpg'), vFrameRate, (frame_width, frame_height))
 
-    while True:
+    limit = int(vFrameRate*(duration*60))
+
+    for i in range(limit):
         has_frame, frame = cap.read()
         if not has_frame:
             print('Can\'t get frame')

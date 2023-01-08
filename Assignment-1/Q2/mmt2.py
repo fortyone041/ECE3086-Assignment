@@ -23,10 +23,10 @@ from time import time
 path_working = r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Assignment-1/Q2'
 os.chdir(path_working)
 
-videoFile = '../surveillance_9.mp4'
+videoFile = '../myVideo.mp4'
 delay = 100
 
-name, ext = os.path.splitext(videoFile)
+name = "Frames"
 foldername = os.path.join(path_working, name)
 
 if not os.path.exists(name):

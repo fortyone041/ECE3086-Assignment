@@ -26,9 +26,6 @@ os.chdir(work_path)
 
 i=0
 ctr=0
-#root = tk.Tk()
-#var=tk.IntVar()
-#root = tk.Tk()
 #%% Call back function
 
 def init():
@@ -58,11 +55,11 @@ def showVideo(filename):
     vFrameRate = np.round( cap.get(cv2.CAP_PROP_FPS) )
     totalFrame = np.round(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-    name, ext = os.path.splitext(filename)
-    destinationFolder = os.path.join(work_path, name, 'vid.mjpeg')
+    dirname = 'Compressed Video'
+    destinationFolder = os.path.join(work_path, dirname, 'compressedVid.mjpeg')
 
-    if not os.path.exists(name):
-        os.makedirs(name)
+    if not os.path.exists(dirname):
+        os.makedirs(dirname)
 
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -137,36 +134,3 @@ button5.place(x=10,y=230)
 
 window.after_idle(init)
 window.mainloop()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

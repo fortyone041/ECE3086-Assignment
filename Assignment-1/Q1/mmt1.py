@@ -18,6 +18,9 @@ import os
 from matplotlib import pyplot as plt
 import matplotlib
 
+path_working = r'/home/fortyone/Desktop/MMU/MMTECH/Assignment/ECE3086-Assignment/Assignment-1/Q2'
+os.chdir(path_working)
+
 def getVideoProperty(videoFile):
     # your code
 
@@ -36,7 +39,7 @@ def getVideoProperty(videoFile):
 
     return(vFrameRate, resolution, videoSize)
 
-videoFile = 'surveillance_9.mp4'
+videoFile = '../myVideo.mp4'
 vFrameRate, resolution, videoSize = getVideoProperty(videoFile)
 
 print("Frame rate of video is = " + str(vFrameRate))

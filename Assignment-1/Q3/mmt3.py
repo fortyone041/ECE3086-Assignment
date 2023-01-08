@@ -27,16 +27,18 @@ def encodeVideoAsMJPEG(videoFile, duration):
     cap = cv2.VideoCapture(videoFile)
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    vFrameRate = np.round( cap.get(cv2.CAP_PROP_FPS) )
     print('Frame width:', frame_width)
     print('Frame height:', frame_height)
+    print("Framerate:", vFrameRate)
 
-    name, ext = os.path.splitext(videoFile)
-    destinationFolder = os.path.join(path_working, name, 'vid.mjpeg')
+    name = "Compressed Video"
+    destinationFolder = os.path.join(path_working, name, 'compressedVid.mjpeg')
 
     if not os.path.exists(name):
         os.makedirs(name)
 
-    video = cv2.VideoWriter(destinationFolder, cv2.VideoWriter_fourcc(*'mjpg'), 15, (frame_width, frame_height))
+    video = cv2.VideoWriter(destinationFolder, cv2.VideoWriter_fourcc(*'mjpg'), vFrameRate, (frame_width, frame_height))
 
     while True:
         has_frame, frame = cap.read()
@@ -56,8 +58,18 @@ def encodeVideoAsMJPEG(videoFile, duration):
     video.release()
     cv2.destroyAllWindows()
 
-    return (destinationFolder)#, compressionRatio)
+    sizevideoFile = os.path.getsize(videoFile)
+    sizecompressedFile = os.path.getsize(destinationFolder)
 
-videoFile = '../surveillance_9.mp4'
-folder = encodeVideoAsMJPEG(videoFile, 10) #10 minutes
+    compressionRatio = sizevideoFile / sizecompressedFile
 
+    print("Size of original video = ", np.round(sizevideoFile/(1024*1024)) , "mb")
+    print("Size of compresses video = ", np.round(sizecompressedFile/(1024*1024)) , "mb")
+
+
+    return (destinationFolder, compressionRatio)
+
+videoFile = '../myVideo.mp4'
+folder, CR = encodeVideoAsMJPEG(videoFile, 10) #10 minutes
+
+print("Compression ratio = ", CR)

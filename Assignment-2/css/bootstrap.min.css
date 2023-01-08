@@ -572,8 +572,8 @@ pre code {
 }
 
 .coll {
-    flex: 50%;
-    max-width: 50%;
+    flex: 25%;
+    max-width: 25%;
     padding: 0 4px;
 }
 
